@@ -9,8 +9,8 @@ chrome.runtime.onMessage.addListener(
   			index++;
 	  		read(index);
 	  		console.log(index);
-  		},200);
-  		
+  		},1);
+
   	}
 });
 
@@ -24,10 +24,10 @@ function read(i) {
 
 function start() {
 	console.log("Content start");
-	
+
 	var current = $("area");
 	var str = "";
-	
+
 	for (var i = 0; i < current.length; i++) {
 		curComplete = false;
 		if (current[i].title) {
@@ -39,8 +39,8 @@ function start() {
 			str += guid +","+left +","+right +"\n";
 			//console.log(str);
 			data.push({guid : guid});
-			
-			
+
+
 			//setTimeout(function (){console.log("time out")},100000);
 			//while(!curComplete) {
 			//}
@@ -51,18 +51,18 @@ function start() {
 	read(0);
 
 	//console.log(str);
-	
+
 	/*
 	var mapHTML = $("#ImageMapImageMap1").html();
 	var area = [];
 	area = mapHTML.split("area");
 	console.log(area);
-	
+
 	for (a in area) {
 		console.log(a);
 	}
 	*/
-	
+
 }
 
 start();
